@@ -1,0 +1,19 @@
+FROM public.ecr.aws/docker/library/python:3.8-slim-buster
+LABEL MAINTAINER="Roberto Crespo"
+
+WORKDIR /usr/src
+
+COPY .dev_tools/dev-requirements.txt .
+COPY imongo/requirements.txt .
+
+RUN pip install -r dev-requirements.txt
+
+COPY imongo/imongo ./imongo
+COPY imongo/tests ./tests
+COPY imongo/ci ./ci
+
+# Config packaging files
+COPY imongo/README.md .
+COPY imongo/setup.py .
+
+CMD ["/bin/bash", "./ci/entrypoint.sh"]
