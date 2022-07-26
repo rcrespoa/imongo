@@ -71,8 +71,8 @@ except ImportError:
         LONG_DESCRIPTION = f.read()
 
 setup(
-    name="imongo",
-    version=__version__
+    name="imongo-orm",
+    version=__version__,
     description="MongoDB ORM interface for Python",
     long_description=LONG_DESCRIPTION,
     author="Roberto Crespo",

@@ -19,6 +19,12 @@ Schema-first mongoDB interface (inspired by [Mongoose](https://mongoosejs.com/))
 
 ## Getting Started
 
+### 0. Install
+
+```bash
+pip install imongo-orm
+```
+
 ### 1. Writing your first Model
 
 ```python
