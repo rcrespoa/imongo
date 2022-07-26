@@ -1,5 +1,7 @@
 # imongo ORM
 
+<img src="https://user-images.githubusercontent.com/48192341/180910930-7be63cd0-5c78-4d3e-afba-a26190b29c18.svg" width="200" height="200" />
+
 Schema-first mongoDB interface (inspired by [Mongoose](https://mongoosejs.com/)). Library serves as a thin wrapper around [PyMongo](!https://pymongo.readthedocs.io/en/stable/).
 
 \
