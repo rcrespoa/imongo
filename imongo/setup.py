@@ -4,6 +4,8 @@ import pathlib
 from setuptools import find_packages
 from setuptools import setup
 
+from imongo import __version__
+
 try:
     # pip >=20
     from pip._internal.req import parse_requirements
@@ -70,7 +72,7 @@ except ImportError:
 
 setup(
     name="imongo",
-    version="0.0.1",
+    version=__version__
     description="MongoDB ORM interface for Python",
     long_description=LONG_DESCRIPTION,
     author="Roberto Crespo",
