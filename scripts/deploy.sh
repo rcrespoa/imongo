@@ -1,12 +1,12 @@
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
-VERSION_FILE=$SCRIPTPATH/../imongo/__init__.py
+VERSION_FILE=$SCRIPTPATH/../imongo/imongo/__init__.py
 
 # Run Quality Control
-cd $SCRIPTPATH/..
-if ! docker build -f $path -t $module_name $SRC_PATH && docker run -it $module_name; then
-    echo "<DEPLOY> Early exit | QA failed"
-    exit 1
-fi
+# cd $SCRIPTPATH/..
+# if ! docker build -f $path -t $module_name $SRC_PATH && docker run -it $module_name; then
+#     echo "<DEPLOY> Early exit | QA failed"
+#     exit 1
+# fi
 
 # Extract Release Version
 RELEASE_VERSION=$(cat $VERSION_FILE | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+')
