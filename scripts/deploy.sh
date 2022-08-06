@@ -16,7 +16,7 @@ cd $SCRIPTPATH/..
 git add . && git commit -m $RELEASE_VERSION
 
 # Push to remote repo
-git push origin master
+git push origin main
 
 # publish to PyPi
 cd $SCRIPTPATH/
