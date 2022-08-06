@@ -46,10 +46,10 @@ class Validator:
                 raise SchemaDataTypeMismatchError(f"Value: {value} does not match expected regex. Key={'.'.join(key_ref)}")
 
     def validate(self, value: Any, key: Key, key_ref: List[str]) -> Union[None, Any]:
-        self._valid_types(key, value, key_ref)
-        self._valid_enum(key, value, key_ref)
-        self._valid_numeric(key, value, key_ref)
-        self._valid_string(key, value, key_ref)
+        self._valid_types(value, key, key_ref)
+        self._valid_enum(value, key, key_ref)
+        self._valid_numeric(value, key, key_ref)
+        self._valid_string(value, key, key_ref)
 
         # Inline transformation for lower/upper case strings
         if key.type in [Types.String]:
