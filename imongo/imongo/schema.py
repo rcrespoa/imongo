@@ -81,7 +81,7 @@ class Schema:
             # print(value)
 
             # Validate key
-            if value:
+            if value is not None:
                 modified = validator.validate(value, schema_key, dict_keys)
                 self._nested_insert(new_entry, modified if modified else value, dict_keys)
 
