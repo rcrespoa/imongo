@@ -77,7 +77,7 @@ class Schema:
                 value = self._get_nested_value(entry, dict_keys)
 
             # Fetch key if it exists
-            value = value if value else self._get_nested_value(entry, dict_keys, raise_err=False)
+            value = value if value is not None else self._get_nested_value(entry, dict_keys, raise_err=False)
             # print(value)
 
             # Validate key
